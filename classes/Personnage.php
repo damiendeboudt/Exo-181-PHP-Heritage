@@ -3,14 +3,32 @@
 // Ma classe s'appelle Personnage
 class Personnage {
 
-    // La propriété id a été modifié pour passer de private à protected, je ne peux pas la modifier ou la lire directement en dehors de cette classe
+    // La propriété id a été modifié pour passer de private à protected, je ne peux pas la modifier ou la lire
+    // directement en dehors de cette classe
     // Mais les classes enfants vont hériter de cette propriété
     // - private $id;
     // + protected $id;
     protected $id;
     protected $nom;
     protected $x;
+
+    /**
+     * @param int $vie
+     */
+    public function setVie(int $vie): void
+    {
+        $this->vie = $vie;
+    }
+
+    /**
+     * @return int
+     */
+    public function getVie(): int
+    {
+        return $this->vie;
+    }
     protected $y;
+    protected $vie = 50;
 
     // Constructeur de ma classe permettant de définir des valeurs par défaut lorsqu'elle est instanciée
     public function __construct() {

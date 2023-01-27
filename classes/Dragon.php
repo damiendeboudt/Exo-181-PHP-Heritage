@@ -19,6 +19,7 @@ class Dragon extends Personnage {
     // Je redéfini la méthode héritée setNom
     public function setNom($nom) {
         $this->nom = "Dragon ".$this->id;
+        $this->vie = 100;
     }
 
     // J'ajoute une méthode cracheFeu, pour le moment cette méthode ne fait rien du tout
